@@ -38,8 +38,8 @@
                 <p id="name">Benoît TRIOPONT</p>
                 <p>Concepteur Développeur d'Applications</p>
             </div>
-            <div class="col-12 justify-content-justified">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio quidem tenetur repellendus odit, mollitia aspernatur sed ratione dicta cum blanditiis itaque laboriosam eum soluta, doloremque, neque labore! Commodi pariatur facere rem quis.
+            <div class="col-12">
+                <p id="accroche">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio quidem tenetur repellendus odit, mollitia aspernatur sed ratione dicta cum blanditiis itaque laboriosam eum soluta, doloremque, neque labore! Commodi pariatur facere rem quis.
                     Qui rerum atque architecto corporis ratione reiciendis. Eos qui ea eligendi possimus aspernatur facere mollitia quasi pariatur quia similique ab id expedita laboriosam nesciunt iure unde, architecto tenetur.
                 </p>
             </div>
@@ -62,12 +62,12 @@
     <div class="container" id="contact">
         <h4>Contact</h4>
         <hr/>
-        <form>
+        <form id="form1">
             <div class="form-row">
-                <div class="form-group col-md-6 col-sm-12">
+                <div class="form-group">
                     <input type="text" class="form-control" id="inputName" placeholder="Nom et prénom">
                 </div>
-                <div class="form-group col-md-6 col-sm-12">
+                <div class="form-group">
                     <input type="email" class="form-control" id="inputMail" placeholder="Adresse mail">
 
                 </div>
@@ -76,10 +76,10 @@
                 <input type="text" class="form-control" id="inputObj" placeholder="Objet">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" id="inputObj" placeholder="Objet">
+                <textarea class="form-control" id="inputCont" placeholder="Contenu du mail" rows="10" cols="30"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">Envoyer</button>
+            <button type="submit" class="btn btn-primary" id="sendMail">Envoyer</button>
         </form>
     </div>
 

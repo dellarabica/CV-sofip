@@ -22,9 +22,20 @@ hr {
     z-index: 100;
 }
 
+#accroche {
+    padding: 4px;
+    text-align: justify;
+}
+
 #showMenu {
     font-size: 24px;
     cursor: pointer;
+}
+
+#form1 input,
+#form1 textarea {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .overlay {

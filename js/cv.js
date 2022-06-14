@@ -34,6 +34,10 @@ function changeMode() {
     }
 }
 
+function checkMail() {
+
+}
+
 $('#showMenu').on('click', function() {
     openNav();
 })
@@ -49,3 +53,8 @@ $('#changeTheme').on('click', function() {
 $(window).on('load', function() {
     changeMode();
 })
+
+$('#sendMail').click(function() {
+    checkMail();
+    //$('#formId').attr('action', 'page1');
+});
