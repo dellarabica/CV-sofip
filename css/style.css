@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+html body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+h4 {
+    text-align: center;
+}
+
+hr {
+    width: 70%;
+    margin: auto;
+}
+
+#header {
+    position: sticky;
+    top: 0;
+    background-color: green;
+    border-bottom: 5px solid green;
+    text-align: center;
+    z-index: 100;
+}
+
+#showMenu {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    background-color: rgb(122, 222, 255);
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+.overlay-content {
+    position: relative;
+    top: 7%;
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.overlay a {
+    padding: 4px;
+    text-decoration: none;
+    font-size: 28px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 1%;
+    right: 45px;
+    font-size: 60px;
+}
+
+.container {
+    margin-top: 15px;
+}
+
+#about {
+    margin-top: 40px;
+}
+
+#pres {
+    text-align: center;
+}
+
+#pfp {
+    width: 70%;
+    border: 2px solid green;
+}
+
+#name {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+    #pfp {
+        width: 40%;
+    }
+}

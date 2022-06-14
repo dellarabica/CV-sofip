@@ -1,0 +1,42 @@
+{
+    "diplome": [{
+            "nom": "Baccalauréat Scientifique",
+            "date": "2018",
+            "ecole": "Lycée Albert Châtelet, Douai",
+            "details": "Option Sciences de la Vie et de la Terre"
+        },
+        {
+            "nom": "BTS Systèmes Numériques",
+            "date": "2020",
+            "ecole": "Lycée Edmond Labbé, Douai",
+            "details": "Option Informatique et Réseaux"
+        },
+        {
+            "nom": "Formation CDA",
+            "date": "oct 2020 - juil 2021",
+            "ecole": "Le Chiffre",
+            "details": "Arrêtée car impossibilité de trouver une entreprise"
+        },
+        {
+            "nom": "Titre Professionnel CDA",
+            "date": "mai 2022 - dec 2022",
+            "ecole": "SOFIP, Douai",
+            "details": ""
+        }
+    ],
+    "exppro": [{
+            "intitule": "Développeur logiciel",
+            "periode": "2022-06-13T14:48:32.938Z",
+            "entreprise": "SOMEX",
+            "lieu": "Escaudain",
+            "descriptif": "blablabla"
+        },
+        {
+            "intitule": "Développeur logiciel",
+            "periode": "2019",
+            "entreprise": "SOMEX",
+            "lieu": "Escaudain",
+            "descriptif": "blablabla"
+        }
+    ]
+}
