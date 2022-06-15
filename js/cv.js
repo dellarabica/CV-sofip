@@ -130,7 +130,7 @@ function loadAbout(abt) {
 
 function loadStudies(stu) {
     for (let i = 0; i < stu.length; i++) {
-        $('#stu').append('<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 m-auto">' +
+        $('#stu').append('<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">' +
             '<table class = "table table-borderless">' +
             '<tr><td rowspan="5"><img src="' + stu[i].img + '" class="img-fluid d-block mx-auto"/></td><td id="date">' + stu[i].date + '</td></tr>' +
             '<tr><td>' + stu[i].nom + '</td></tr>' +
@@ -155,22 +155,23 @@ function loadExp(exp) {
 }
 
 function loadSkills(ski) {
-    var prg = ski[0].prog,
-        lg = ski[0].languages;
+    var prg = ski[0]['prog'],
+        lg = ski[0]['languages'];
 
-    console.log(prg.HTML_img);
-    $('#skl').append('<div class="col-md-5 col-lg-5 col-sm-5 col-xs-12 m-auto">' +
+    console.log(prg);
+    $('#skl').append('<div class="col-md-5 col-lg-5 col-sm-12 col-xs-12 m-auto">' +
         '<table class = "table table-borderless">' +
         '<tr><td colspan="2" id="date">Programmation</td></tr>' +
-        '<tr><td><img src="' + prg.HTML_img + '"/></td><td><img src="' + prg.CSS_img + '"/></td></tr>' +
-        '<tr><td><img src="' + prg.JS_img + '"/></td><td><img src="' + prg.Csharp_img + '"/></td></tr>' +
-        '<tr><td><img src="' + prg.PHP_img + '"/></td><td><img src="' + prg.SQL_img + '"/></td></tr>' +
-        '</table></div>' + '<div class="col-md-5 col-lg-5 col-sm-5 col-xs-12 m-auto">' +
+        '<tr><td><img src="' + prg[0].HTML_img + '"/></td><td><img src="' + prg[0].CSS_img + '"/></td></tr>' +
+        '<tr><td><img src="' + prg[0].JS_img + '"/></td><td><img src="' + prg[0].CSharp_img + '"/></td></tr>' +
+        '<tr><td><img src="' + prg[0].PHP_img + '"/></td><td><img src="' + prg[0].SQL_img + '"/></td></tr>' +
+        '</table></div>' +
+        '<div class="col-md-5 col-lg-5 col-sm-12 col-xs-12 m-auto">' +
         '<table class = "table table-borderless">' +
         '<tr><td colspan="2" id="date">Langues</td></tr>' +
-        '<tr><td><img src="' + lg.FR_img + '"/></td><td>' + lg.FR + '</td></tr>' +
-        '<tr><td><img src="' + prg.JS_img + '"/></td><td><img src="' + prg.Csharp_img + '"/></td></tr>' +
-        '<tr><td><img src="' + prg.PHP_img + '"/></td><td><img src="' + prg.SQL_img + '"/></td></tr>' +
+        '<tr><td><img src="' + lg[0].FR_img + '"/></td><td>' + lg[0].FR + '</td></tr>' +
+        '<tr><td><img src="' + lg[0].EN_img + '"/></td><td>' + lg[0].EN + '</td></tr>' +
+        '<tr><td><img src="' + lg[0].GE_img + '"/></td><td>' + lg[0].GE + '</td></tr>' +
         '</table></div>'
     );
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 html body {
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     padding: 0;
     margin: 0;
 }
@@ -19,7 +19,7 @@ hr {
     position: sticky;
     top: 0;
     background-color: green;
-    border-bottom: 5px solid green;
+    border-bottom: 0.3125em solid green;
     text-align: center;
     z-index: 100;
 }
@@ -29,18 +29,18 @@ hr {
 }
 
 #showMenu {
-    font-size: 24px;
+    font-size: 1.5em;
     cursor: pointer;
 }
 
 #form1 input,
 #form1 textarea {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0.625em;
+    margin-bottom: 0.625em;
 }
 
 #form1 {
-    margin-bottom: 70px;
+    margin-bottom: 6.25em;
 }
 
 .overlay {
@@ -57,13 +57,13 @@ hr {
     top: 7%;
     width: 100%;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 1.25em;
 }
 
 .overlay a {
-    padding: 4px;
+    padding: 0.25em;
     text-decoration: none;
-    font-size: 28px;
+    font-size: 1.75em;
     color: #000000;
     display: block;
     transition: 0.3s;
@@ -77,16 +77,16 @@ hr {
 .overlay .closebtn {
     position: absolute;
     top: 1%;
-    right: 45px;
-    font-size: 60px;
+    right: 2.8125em;
+    font-size: 3.75em;
 }
 
 .container {
-    margin-top: 15px;
+    margin-top: 0.9375em;
 }
 
 #head {
-    margin-top: 40px;
+    margin-top: 2.5em;
 }
 
 .leftTableAbout {
@@ -99,26 +99,26 @@ hr {
 
 #pfp {
     width: 70%;
-    border: 2px solid green;
+    border: 0.125em solid green;
 }
 
 #name,
 #date {
     font-weight: 900;
-    font-size: 30px;
+    font-size: 1.875em;
 }
 
 #date {
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .table {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.4);
     vertical-align: middle;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-    border: 2px solid green;
+    -moz-border-radius: 1.875em;
+    border-radius: 1.875em;
+    border: 0.125em solid green;
     border-collapse: separate;
 }
 
@@ -127,20 +127,21 @@ hr {
 }
 
 #wrk,
-#stu {
-    margin-top: 15px;
-    margin-bottom: 15px;
+#stu,
+#skl {
+    margin-top: 0.9375em;
+    margin-bottom: 0.9375em;
     display: flex;
 }
 
 @media screen and (max-height: 450px) {
     .overlay a {
-        font-size: 20px
+        font-size: 1.25em
     }
     .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
+        font-size: 2.5em;
+        top: 0.9375em;
+        right: 2.1875em;
     }
     #pfp {
         width: 40%;
