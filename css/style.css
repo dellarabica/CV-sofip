@@ -2,6 +2,8 @@
 html body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
+    padding: 0;
+    margin: 0;
 }
 
 h4 {
@@ -9,7 +11,7 @@ h4 {
 }
 
 hr {
-    width: 70%;
+    width: 40%;
     margin: auto;
 }
 
@@ -23,7 +25,6 @@ hr {
 }
 
 #accroche {
-    padding: 4px;
     text-align: justify;
 }
 
@@ -36,6 +37,10 @@ hr {
 #form1 textarea {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+#form1 {
+    margin-bottom: 70px;
 }
 
 .overlay {
@@ -80,8 +85,12 @@ hr {
     margin-top: 15px;
 }
 
-#about {
+#head {
     margin-top: 40px;
+}
+
+.leftTableAbout {
+    font-weight: bolder;
 }
 
 #pres {
@@ -93,9 +102,35 @@ hr {
     border: 2px solid green;
 }
 
-#name {
+#name,
+#date {
     font-weight: 900;
     font-size: 30px;
+}
+
+#date {
+    font-size: 20px;
+}
+
+.table {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    vertical-align: middle;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    border: 2px solid green;
+    border-collapse: separate;
+}
+
+#imgStu {
+    vertical-align: middle;
+}
+
+#wrk,
+#stu {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
 }
 
 @media screen and (max-height: 450px) {
@@ -109,5 +144,8 @@ hr {
     }
     #pfp {
         width: 40%;
+    }
+    #accroche {
+        width: 100%;
     }
 }

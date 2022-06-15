@@ -4,35 +4,65 @@
             "date": "2018",
             "ecole": "Lycée Albert Châtelet",
             "lieu": "Douai",
-            "details": "Option Sciences de la Vie et de la Terre"
+            "details": "Option Sciences de la Vie et de la Terre",
+            "img": "img/chatelet.png"
         },
         {
             "nom": "BTS Systèmes Numériques",
             "date": "2020",
             "ecole": "Lycée Edmond Labbé",
             "lieu": "Douai",
-            "details": "Option Informatique et Réseaux"
+            "details": "Option Informatique et Réseaux",
+            "img": "img/labbe.png"
         },
         {
             "nom": "Formation CDA",
             "date": "10/2020 - 07/2021",
             "ecole": "Le Chiffre",
             "lieu": "Lille",
-            "details": "Arrêtée car impossibilité de trouver une entreprise"
+            "details": "Arrêtée car impossibilité de trouver une entreprise",
+            "img": "img/lechiffre.png"
         },
         {
             "nom": "Titre Professionnel CDA",
             "date": "05/2022 - 12/2022",
             "ecole": "SOFIP",
             "lieu": "Douai",
-            "details": ""
+            "details": "En cours",
+            "img": "img/sofip.png"
         }
     ],
     "exppro": [{
         "intitule": "Développeur logiciel",
-        "periode": "2019",
+        "periode": "05/2019 - 07/2019",
         "entreprise": "SOMEX",
         "lieu": "Escaudain",
         "descriptif": "Stage de 6 semaines dans le cadre du BTS. <br/> Réalisation d'une application en Visual Basic permettant de créer, éditer et supprimer des compte-rendus d'installation d'alarmes."
-    }]
+    }],
+    "skills": [{
+        "languages": [{
+            "FR": "Langue natale",
+            "FR_img": "img/fr.png",
+            "EN": "Niveau B1/B2",
+            "EN_img": "img/en.png",
+            "GE": "Niveau A2",
+            "GE_img": "img/ge.png"
+        }],
+        "prog": [{
+            "HTML_img": "img/html.png",
+            "CSS_img": "img/css.png",
+            "JS_img": "img/js.png",
+            "CSharp_img": "img/csharp.png",
+            "PHP_img": "img/php.png",
+            "SQL_img": "img/sql.png"
+        }]
+    }],
+    "aboutme": {
+        "birth": "08/10/2002",
+        "address": "20 rue de Bretagne",
+        "cp": "59580",
+        "city": "Aniche",
+        "phone": "+33 6 61 40 33 71",
+        "move": "Transports en commun"
+    }
 }

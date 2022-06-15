@@ -1,7 +1,6 @@
 var mode,
-    studies,
-    work,
-    skills,
+    regexNom = /^\w[A-z\-]{3,}\040[A-z\-]{3,}$/,
+    regexMail = /^[a-z][a-z0-9_\-\.]+@[a-z0-9_\-\.]+\.[a-z]{2,3}$/,
     isOpen = false;
 
 function openNav() {
@@ -29,6 +28,9 @@ function changeMode() {
             $('.overlay a').css({
                 'color': 'black'
             });
+            $('.table').css({
+                'color': 'black'
+            });
             break;
         case "D":
             $('body').css({
@@ -40,7 +42,10 @@ function changeMode() {
             });
             $('.overlay a').css({
                 'color': 'white'
-            })
+            });
+            $('.table').css({
+                'color': 'white'
+            });
             break;
         default:
             alert("Erreur !");
@@ -49,47 +54,125 @@ function changeMode() {
 }
 
 function checkNom(valEntree) {
-    if (regexNom.test(valEntree)) {
-        $("#cNom").text("Pass");
-        return true;
-    } else {
-        $("#cNom").text("Fail");
+
+    if (valEntree == '') {
+        alert('Le champ "Nom" est vide !');
         return false;
+    } else {
+        if (regexNom.test(valEntree)) {
+            return true;
+        } else {
+            return false;
+        }
     }
+
 }
 
 function checkMail(valEntree) {
-    if (regexMail.test(valEntree)) {
-        $("#cMail").text("Pass");
-        return true;
-    } else {
-        $("#cMail").text("Fail");
+    if (valEntree == '') {
+        alert('Le champ "Email" est vide !"');
         return false;
+    } else {
+        if (regexMail.test(valEntree)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+function checkObj(valEntree) {
+    if (valEntree == '') {
+        alert('Le champ "Objet" est vide !"');
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function checkCont(valEntree) {
+    if (valEntree == '') {
+        alert('Le champ "Contenu" est vide !"');
+        return false;
+    } else {
+        return true;
     }
 }
 
 function checkAll() {
-    var checkAll = new Array(checkNom($("#name").val()), checkPrenom($("#surname").val()), checkNum($("#numMember").val()), checkAdr($("#address").val()), checkCity($("#city").val()), checkCP($("#code").val()), checkMail($("#mail").val()), checkTel($("#phone").val()));
+    var checkAll = new Array(
+        checkNom($("#inputName").val()),
+        checkMail($("#inputMail").val()),
+        checkObj($("#inputObj").val()),
+        checkCont($("#inputCont").val()));
 
     if ($.inArray(false, checkAll) != -1) {
-        return false;
+        alert('Au moins un des champs sont incorrects.');
     } else {
-        return true;
+        window.location = 'mailto:' + $("#inputMail").val() + '?subject=' + $("#inputObj").val() + '&body=' + $("#inputCont").val();
     }
 }
 
-function loadJSON(callback) {
+function getAge(date) {
+    var diff = Date.now() - date.getTime();
+    var age = new Date(diff);
+    return Math.abs(age.getUTCFullYear() - 1970);
+}
 
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'json/data.json', true);
-    xobj.onreadystatechange = function() {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-            callback(xobj.responseText);
-        }
-    };
-    xobj.send(null);
+function loadAbout(abt) {
+    $('#aboutMe > tbody:last-child').append(
+        '<tr><td class="leftTableAbout">Addresse</td><td>' + abt.address + '<br/>' + +abt.cp + ' ' + abt.city + '</td></tr>' +
+        '<tr><td class="leftTableAbout">Date de naissance</td><td>' + abt.birth + ' <br/>(' + getAge(new Date(2002, 10, 8)) + ' ans)</td></tr>' +
+        '<tr><td class="leftTableAbout">Numéro de téléphone</td><td>' + abt.phone + '</td></tr>' +
+        '<tr><td class="leftTableAbout">Moyen(s) de transport</td><td>' + abt.move + '</td></tr>'
+    );
+}
+
+function loadStudies(stu) {
+    for (let i = 0; i < stu.length; i++) {
+        $('#stu').append('<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 m-auto">' +
+            '<table class = "table table-borderless">' +
+            '<tr><td rowspan="5"><img src="' + stu[i].img + '" class="img-fluid d-block mx-auto"/></td><td id="date">' + stu[i].date + '</td></tr>' +
+            '<tr><td>' + stu[i].nom + '</td></tr>' +
+            '<tr><td>' + stu[i].ecole + ', ' + stu[i].lieu + '</td></tr>' +
+            '<tr><td>' + stu[i].details + '</td></tr>' +
+            '</table></div>'
+        );
+    }
+}
+
+function loadExp(exp) {
+    for (let i = 0; i < exp.length; i++) {
+        $('#wrk').append('<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 mx-auto">' +
+            '<table class = "table table-borderless">' +
+            '<tr><td id="date">' + exp[i].periode + '</td></tr>' +
+            '<tr><td>' + exp[i].intitule + '</td></tr>' +
+            '<tr><td>' + exp[i].entreprise + ', ' + exp[i].lieu + '</td></tr>' +
+            '<tr><td>' + exp[i].descriptif + '</td></tr>' +
+            '</table></div>'
+        );
+    }
+}
+
+function loadSkills(ski) {
+    var prg = ski[0].prog,
+        lg = ski[0].languages;
+
+    console.log(prg.HTML_img);
+    $('#skl').append('<div class="col-md-5 col-lg-5 col-sm-5 col-xs-12 m-auto">' +
+        '<table class = "table table-borderless">' +
+        '<tr><td colspan="2" id="date">Programmation</td></tr>' +
+        '<tr><td><img src="' + prg.HTML_img + '"/></td><td><img src="' + prg.CSS_img + '"/></td></tr>' +
+        '<tr><td><img src="' + prg.JS_img + '"/></td><td><img src="' + prg.Csharp_img + '"/></td></tr>' +
+        '<tr><td><img src="' + prg.PHP_img + '"/></td><td><img src="' + prg.SQL_img + '"/></td></tr>' +
+        '</table></div>' + '<div class="col-md-5 col-lg-5 col-sm-5 col-xs-12 m-auto">' +
+        '<table class = "table table-borderless">' +
+        '<tr><td colspan="2" id="date">Langues</td></tr>' +
+        '<tr><td><img src="' + lg.FR_img + '"/></td><td>' + lg.FR + '</td></tr>' +
+        '<tr><td><img src="' + prg.JS_img + '"/></td><td><img src="' + prg.Csharp_img + '"/></td></tr>' +
+        '<tr><td><img src="' + prg.PHP_img + '"/></td><td><img src="' + prg.SQL_img + '"/></td></tr>' +
+        '</table></div>'
+    );
 }
 
 $('#header').on('click', function() {
@@ -118,13 +201,15 @@ $('#changeTheme').on('click', function() {
 
 $(window).on('load', function() {
     changeMode();
-    loadJSON(function(response) {
-        // Parse JSON string into object
-        console.log(JSON.parse(response))
-    })
+    fetch('json/data.json').then(function(response) { return response.json(); })
+        .then(function(json) {
+            loadStudies(json.diplome);
+            loadExp(json.exppro);
+            loadSkills(json.skills);
+            loadAbout(json.aboutme);
+        });
 })
 
 $('#sendMail').click(function() {
     checkAll();
-    //$('#formId').attr('action', 'page1');
 });
