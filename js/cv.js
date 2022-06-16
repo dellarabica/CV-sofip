@@ -155,23 +155,19 @@ function loadExp(exp) {
 }
 
 function loadSkills(ski) {
-    var prg = ski[0]['prog'],
-        lg = ski[0]['languages'];
-
-    console.log(prg);
     $('#skl').append('<div class="col-md-5 col-lg-5 col-sm-12 col-xs-12 m-auto">' +
         '<table class = "table table-borderless">' +
         '<tr><td colspan="2" id="date">Programmation</td></tr>' +
-        '<tr><td><img src="' + prg[0].HTML_img + '"/></td><td><img src="' + prg[0].CSS_img + '"/></td></tr>' +
-        '<tr><td><img src="' + prg[0].JS_img + '"/></td><td><img src="' + prg[0].CSharp_img + '"/></td></tr>' +
-        '<tr><td><img src="' + prg[0].PHP_img + '"/></td><td><img src="' + prg[0].SQL_img + '"/></td></tr>' +
+        '<tr><td><img src="' + ski['prog'].HTML_img + '"/></td><td><img src="' + ski['prog'].CSS_img + '"/></td></tr>' +
+        '<tr><td><img src="' + ski['prog'].JS_img + '"/></td><td><img src="' + ski['prog'].CSharp_img + '"/></td></tr>' +
+        '<tr><td><img src="' + ski['prog'].PHP_img + '"/></td><td><img src="' + ski['prog'].SQL_img + '"/></td></tr>' +
         '</table></div>' +
         '<div class="col-md-5 col-lg-5 col-sm-12 col-xs-12 m-auto">' +
         '<table class = "table table-borderless">' +
         '<tr><td colspan="2" id="date">Langues</td></tr>' +
-        '<tr><td><img src="' + lg[0].FR_img + '"/></td><td>' + lg[0].FR + '</td></tr>' +
-        '<tr><td><img src="' + lg[0].EN_img + '"/></td><td>' + lg[0].EN + '</td></tr>' +
-        '<tr><td><img src="' + lg[0].GE_img + '"/></td><td>' + lg[0].GE + '</td></tr>' +
+        '<tr><td><img src="' + ski['languages'].FR_img + '"/></td><td>' + ski['languages'].FR + '</td></tr>' +
+        '<tr><td><img src="' + ski['languages'].EN_img + '"/></td><td>' + ski['languages'].EN + '</td></tr>' +
+        '<tr><td><img src="' + ski['languages'].GE_img + '"/></td><td>' + ski['languages'].GE + '</td></tr>' +
         '</table></div>'
     );
 }

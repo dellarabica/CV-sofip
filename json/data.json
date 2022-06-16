@@ -39,24 +39,24 @@
         "lieu": "Escaudain",
         "descriptif": "Stage de 6 semaines dans le cadre du BTS. <br/> Réalisation d'une application en Visual Basic permettant de créer, éditer et supprimer des compte-rendus d'installation d'alarmes."
     }],
-    "skills": [{
-        "languages": [{
+    "skills": {
+        "languages": {
             "FR": "Langue natale",
             "FR_img": "img/fr.png",
             "EN": "Niveau B1/B2",
             "EN_img": "img/en.png",
             "GE": "Niveau A2",
             "GE_img": "img/ge.png"
-        }],
-        "prog": [{
+        },
+        "prog": {
             "HTML_img": "img/html.png",
             "CSS_img": "img/css.png",
             "JS_img": "img/js.png",
             "CSharp_img": "img/csharp.png",
             "PHP_img": "img/php.png",
             "SQL_img": "img/sql.png"
-        }]
-    }],
+        }
+    },
     "aboutme": {
         "birth": "08/10/2002",
         "address": "20 rue de Bretagne",
